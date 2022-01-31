@@ -1,0 +1,147 @@
+Section 1: final result comparison
+
+----------------------------------
+
+br_same.s, cancel_req.s, ld.s, st_loop.s:
+final result (10 each):
+6 points for "No. of cycle". They lose 1 point per each 25 cycles difference. So, if the difference is X, they lose X / 25 points.
+4 points for the rest of the final result.
+
+difficult.s, example.s, ld_1.s, mem.s, test_1.s:
+final result (2 each):
+1 points for "No. of cycle". They lose 1 point per each 150 cycles difference. So, if the difference is X, they lose X / 150 points.
+1 points for the rest of the final result.
+
+hidden1.s:
+final result (3):
+2 points for "No. of cycle". They lose 1 point per each 50 cycles difference. So, if the difference is X, they lose X / 50 points.
+1 points for the rest of the final result.
+
+Section 1 total points = 53
+
+------------------------------------
+
+Section 2: cycle-by-cycle comparison
+
+------------------------------------
+
+Cycle-by-cycle policy:
+
+Results (rdump and mdump) are checked, and they should exactly match the reference sim. For each test input, if the only mismatch is "Instructions Retired", 80% of the points are awarded. If all the cycles match, full points are awarded. If there are mismatches but no more than 2, 90% of the points are awarded. Otherwise, if more than 70% of the cycles match, 70% of the points are awarded. If between 40%-70% of the cycles match, 40% of the points are awarded. Otherwise, no points are awarded.
+
+br_same.s, cancel_req.s, ld.s, st_loop.s:
+cycle-by-cycle (10 each):
+Policy listed above.
+
+difficult.s, example.s, ld_1.s, mem.s, test_1.s:
+cycle-by-cycle (1 each):
+Policy listed above.
+
+hidden1.s:
+cycle-by-cycle (2):
+Policy listed above.
+
+Section 2 total points = 47
+
+Total score: 100 / 100
+lab4-grade.txt
+---------
+Section 1: final result comparison
+Correct test (excluding number of cycles): br_same.x
+Points awarded: 4 / 4
+Correct test (just number of cycles): br_same.x
+Points awarded: 6 / 6
+Correct test (excluding number of cycles): cancel_req.x
+Points awarded: 4 / 4
+Correct test (just number of cycles): cancel_req.x
+Points awarded: 6 / 6
+Correct test (excluding number of cycles): ld.x
+Points awarded: 4 / 4
+Correct test (just number of cycles): ld.x
+Points awarded: 6 / 6
+Correct test (excluding number of cycles): st_loop.x
+Points awarded: 4 / 4
+Correct test (just number of cycles): st_loop.x
+Points awarded: 6 / 6
+difficult.x: final results excluding number of cycles are incorrect. 
+Points awarded: 0 / 1
+Your simulator crashed unexpectedly, preventing us from recording the number of cycles.
+Incorrect test: difficult.x off by 586 cycles, for a penalty of 1 
+Points awarded: 0 / 1
+Correct test (excluding number of cycles): example.x
+Points awarded: 1 / 1
+Correct test (just number of cycles): example.x
+Points awarded: 1 / 1
+Correct test (excluding number of cycles): ld_1.x
+Points awarded: 1 / 1
+Correct test (just number of cycles): ld_1.x
+Points awarded: 1 / 1
+mem.x: final results excluding number of cycles are incorrect. 
+Points awarded: 0 / 1
+Correct test (just number of cycles): mem.x
+Points awarded: 1 / 1
+test_1.x: final results excluding number of cycles are incorrect. 
+Points awarded: 0 / 1
+Correct test (just number of cycles): test_1.x
+Points awarded: 1 / 1
+hidden1.x: final results excluding number of cycles are incorrect. 
+Points awarded: 0 / 1
+Correct test (just number of cycles): hidden1.x
+Points awarded: 2 / 2
+
+Section 1 score: 48 / 53
+
+Section 2: cycle-by-cycle comparison
+Test: br_same.x
+Reference simulator cycle count: 115
+Number of cycles: 115
+Points awarded: 10 / 10
+
+Test: cancel_req.x
+Reference simulator cycle count: 433
+Number of cycles: 433
+Points awarded: 10 / 10
+
+Test: ld.x
+Reference simulator cycle count: 168
+Number of cycles: 168
+Points awarded: 10 / 10
+
+Test: st_loop.x
+Reference simulator cycle count: 640
+Number of cycles: 640
+Points awarded: 10 / 10
+
+Test: difficult.x
+Reference simulator cycle count: 586
+Number of cycles: 584
+Points awarded: .9 / 1
+
+Test: example.x
+Reference simulator cycle count: 170
+Number of cycles: 170
+Points awarded: 1 / 1
+
+Test: ld_1.x
+Reference simulator cycle count: 111
+Number of cycles: 111
+Points awarded: 1 / 1
+
+Test: mem.x
+Reference simulator cycle count: 743
+Number of cycles: 633
+Points awarded: .7 / 1
+
+Test: test_1.x
+Reference simulator cycle count: 807
+Number of cycles: 226
+Points awarded: 0 / 1
+
+Test: hidden1.x
+Reference simulator cycle count: 1487
+Number of cycles: 532
+Points awarded: 0 / 2
+
+Section 2 score: 43.6 / 47
+
+Total score: 91.6 / 100
