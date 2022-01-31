@@ -5,7 +5,7 @@ In this course, I wrote a C program that is an instruction-level simulator for a
 
 ## Features
 ### 5-Stage Pipeline
-1. fetch 2. decode 3. execute 4. memory 5. write-back
+* fetch, decode, execute, memory, write-back
 * handles branch cases, stall cases, and bypass cases
 
 ### Branch Prediction
